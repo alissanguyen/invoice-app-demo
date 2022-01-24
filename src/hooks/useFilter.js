@@ -1,34 +1,41 @@
-import { useEffect, useState, useRef } from "react";
+import * as React from "react";
 
 const initialFilterType = "all";
 
 const useFilter = (callback) => {
-  const [filteredInvoices, setFilteredInvoices] = useState(callback.invoices);
-  const [filterType, setFilterType] = useState(initialFilterType);
-  const previousFilterType = useRef(initialFilterType);
+  const [filteredInvoices, setFilteredInvoices] = React.useState(
+    callback.invoices
+  );
+  const [filterType, setFilterType] = React.useState(initialFilterType);
+  const previousFilterType = React.useRef(initialFilterType);
 
   /**
    * Function to filter filteredInvoices based on filter type.
    * @param    {String}  string - String with filter type
    */
-  const handleFilter = (type) => {
-    if (type === initialFilterType) {
-      setFilteredInvoices(callback.invoices);
-      return false;
-    }
+  const handleFilter = React.useCallback(
+    (type) => {
+      if (type === initialFilterType) {
+        setFilteredInvoices(callback.invoices);
+        return false;
+      }
 
-    const newInvoices = callback.invoices.filter(
-      (item) => item.status === type
-    );
-    setFilteredInvoices(newInvoices);
-  };
+      const newInvoices = callback.invoices.filter(
+        (item) => item.status === type
+      );
+      setFilteredInvoices(newInvoices);
+    },
+    [callback.invoices]
+  );
+
+  // const memoizedHandleFilter =
 
   /**
    * Running an effect whenever callback changes and call handleFilter() with current type
    */
-  useEffect(() => {
+  React.useEffect(() => {
     handleFilter(filterType);
-  }, [filterType, callback]);
+  }, [filterType, handleFilter]);
 
   /**
    * Function to change filter type based on passed props.

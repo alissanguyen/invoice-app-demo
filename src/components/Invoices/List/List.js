@@ -38,7 +38,7 @@ const List = () => {
         } else {
             document.title = `Invoices | ${filterType} (${filteredInvoices.length})`;
         }
-    }, [filteredInvoices]);
+    }, [filteredInvoices, filterType]);
 
     return (
         <>
