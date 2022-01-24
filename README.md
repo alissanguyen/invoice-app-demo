@@ -9,10 +9,12 @@ A demo landing page for invoices management/
 - Dark/Light theme.
 - Responsive layout (phone, tablet, desktop).
 - Simplistic design
+
 - Add/delete invoices
 
 ## What To Expect
-![GithubSpotter](https://user-images.githubusercontent.com/69443738/150660571-e343e4a4-13ce-4c94-871f-6ae38955dcaf.png)
+![Dark](https://user-images.githubusercontent.com/69443738/150882554-ac64453a-2502-480b-8a0d-7d38de5c43e2.png)
+![Light](https://user-images.githubusercontent.com/69443738/150882654-6e5c493b-31dc-4945-a966-9422acc838ba.png)
 
 
 ### Usage
