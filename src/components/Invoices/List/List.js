@@ -7,7 +7,7 @@ import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import languageSensitiveNum from '../../../utilities/languageSensitiveNum';
 import dateToString from '../../../utilities/dateToString';
 import { invoicesVariants } from '../../../utilities/framerVariants';
-import { useGlobalContext } from '../../App/context';
+import { useGlobalContext } from '../../../context';
 import {
     StyledList,
     Item,

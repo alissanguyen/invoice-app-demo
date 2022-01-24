@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Icon from '../../shared/Icon/Icon';
 import { useTheme } from 'styled-components';
-import { useGlobalContext } from '../../App/context';
+import { useGlobalContext } from '../../../context';
 import { StyledFilter, Button, List, Item, StatusFilter } from './FilterStyles';
 
 const Filter = ({ isDesktop }) => {

@@ -4,7 +4,7 @@ import { useReducedMotion } from 'framer-motion';
 import ModalDelete from './ModalDelete';
 import ModalStatus from './ModalStatus';
 import { modalVariants } from '../../utilities/framerVariants';
-import { useGlobalContext } from '../App/context';
+import { useGlobalContext } from '../../context';
 import { StyledModal } from './ModalStyles';
 
 const Modal = () => {

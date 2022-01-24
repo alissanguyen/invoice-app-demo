@@ -1,4 +1,4 @@
-import { useGlobalContext } from '../../App/context';
+import { useGlobalContext } from '../../../context';
 import Select from '../Select/Select';
 import DatePicker from '../DatePicker/DatePicker';
 import List from '../List/List';

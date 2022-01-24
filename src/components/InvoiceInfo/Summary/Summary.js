@@ -1,4 +1,4 @@
-import { useGlobalContext } from '../../App/context';
+import { useGlobalContext } from '../../../context';
 import languageSensitiveNum from '../../../utilities/languageSensitiveNum';
 import {
     StyledSummary,

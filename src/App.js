@@ -1,4 +1,4 @@
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Header from "./components/Header/Header";
 import Invoices from "./components/Invoices/Invoices";
@@ -6,7 +6,7 @@ import FormController from "./components/FormController/FormController";
 import InvoiceView from "./components/InvoiceView/InvoiceView";
 import Modal from "./components/Modal/Modal";
 import RouteError from "./components/RouteError/RouteError";
-import { useGlobalContext } from "./components/App/context";
+import { useGlobalContext } from "./context";
 import { AnimatePresence } from "framer-motion";
 import "./App.css";
 
@@ -25,7 +25,7 @@ const App = () => {
           {isModalOpen && <Modal />}
         </AnimatePresence>
         <AnimatePresence exitBeforeEnter>
-          <Switch location={location} key={location.key}>
+          <Routes location={location} key={location.key}>
             <Route exact path="/">
               <Invoices />
             </Route>
@@ -33,7 +33,7 @@ const App = () => {
             <Route path="*">
               <RouteError />
             </Route>
-          </Switch>
+          </Routes>
         </AnimatePresence>
       </Wrapper>
     </div>

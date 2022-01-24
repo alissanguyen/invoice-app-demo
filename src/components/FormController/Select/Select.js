@@ -1,7 +1,7 @@
 import Icon from '../../shared/Icon/Icon';
 import { useState, useRef, useEffect } from 'react';
 import { useTheme } from 'styled-components';
-import { useGlobalContext } from '../../App/context';
+import { useGlobalContext } from '../../../context';
 import { StyledSelect, Cta, List, Item, Option } from './SelectStyles';
 
 const Select = () => {

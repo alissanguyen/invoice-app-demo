@@ -1,5 +1,5 @@
 import { useReducedMotion } from 'framer-motion';
-import { useGlobalContext } from '../../App/context';
+import { useGlobalContext } from '../../../context';
 import { invoicesVariants } from '../../../utilities/framerVariants';
 import {
     StyledErrorMessage,

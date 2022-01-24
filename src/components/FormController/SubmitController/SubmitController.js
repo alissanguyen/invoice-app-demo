@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Button from '../../shared/Button/Button';
-import { useGlobalContext } from '../../App/context';
+import { useGlobalContext } from '../../../context';
 import { StyledSubmitController } from './SubmitControllerStyles';
 
 const SubmitController = () => {

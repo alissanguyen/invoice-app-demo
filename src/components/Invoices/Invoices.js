@@ -1,5 +1,5 @@
 import { useReducedMotion } from 'framer-motion';
-import { useGlobalContext } from '../App/context';
+import { useGlobalContext } from '../../context';
 import Filter from './Filter/Filter';
 import List from './List/List';
 import Button from '../shared/Button/Button';

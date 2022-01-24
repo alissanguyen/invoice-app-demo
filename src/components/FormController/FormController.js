@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { useTheme } from 'styled-components';
 import { useReducedMotion } from 'framer-motion';
-import { useGlobalContext } from '../App/context';
+import { useGlobalContext } from '../../context';
 import { FormControllerVariants } from '../../utilities/framerVariants';
 import Icon from '../shared/Icon/Icon';
 import SubmitController from './SubmitController/SubmitController';

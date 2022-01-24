@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { primaryFontStyles } from '../../../utilities/typographyStyles';
-import plusIcon from '../../../assets/images/icon-plus.svg';
+import plusIcon from '../../../images/icon-plus.svg';
 
 export const buttonDefault = css`
     ${primaryFontStyles}

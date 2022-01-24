@@ -1,7 +1,7 @@
 import Icon from '../../shared/Icon/Icon';
 import Button from '../../shared/Button/Button';
 import { useTheme } from 'styled-components';
-import { useGlobalContext } from '../../App/context';
+import { useGlobalContext } from '../../../context';
 import {
     Fieldset,
     Legend,

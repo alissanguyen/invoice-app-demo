@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import checkIcon from '../../../assets/images/icon-check.svg';
+import checkIcon from '../../../images/icon-check.svg';
 import { buttonDefault } from '../../shared/Button/ButtonStyles';
 
 export const StyledFilter = styled.div`

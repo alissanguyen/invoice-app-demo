@@ -1,11 +1,11 @@
 import Button from "../shared/Button/Button";
-import { useGlobalContext } from "../App/context";
-import { useHistory } from "react-router-dom";
+import { useGlobalContext } from "../../context";
+import { useNavigate } from "react-router-dom";
 import { Container, Title, Text, CtaGroup } from "./ModalStyles";
 
 const ModalDelete = ({ variants }) => {
   const { state, toggleModal, deleteInvoice } = useGlobalContext();
-  const history = useHistory();
+  const history = useNavigate();
 
   const routeChange = () => {
     let path = `/`;
