@@ -8,13 +8,6 @@ const useFilter = (callback) => {
   const previousFilterType = useRef(initialFilterType);
 
   /**
-   * Running an effect whenever callback changes and call handleFilter() with current type
-   */
-  useEffect(() => {
-    handleFilter(filterType);
-  });
-
-  /**
    * Function to filter filteredInvoices based on filter type.
    * @param    {String}  string - String with filter type
    */
@@ -29,6 +22,13 @@ const useFilter = (callback) => {
     );
     setFilteredInvoices(newInvoices);
   };
+
+  /**
+   * Running an effect whenever callback changes and call handleFilter() with current type
+   */
+  useEffect(() => {
+    handleFilter(filterType);
+  }, [filterType, callback]);
 
   /**
    * Function to change filter type based on passed props.

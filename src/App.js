@@ -9,6 +9,7 @@ import RouteError from "./components/RouteError/RouteError";
 import { useGlobalContext } from "./context";
 import { AnimatePresence } from "framer-motion";
 import "./App.css";
+import React from "react";
 
 const App = () => {
   const { state } = useGlobalContext();
@@ -26,13 +27,10 @@ const App = () => {
         </AnimatePresence>
         <AnimatePresence exitBeforeEnter>
           <Routes location={location} key={location.key}>
-            <Route exact path="/">
-              <Invoices />
-            </Route>
-            <Route path="/invoice/:id" children={<InvoiceView />} />
-            <Route path="*">
-              <RouteError />
-            </Route>
+            <Route exact path="/" element={<Invoices />}></Route>
+            <Route path="/invoice/:id" element={<InvoiceView />} />
+
+            <Route path="*" element={<RouteError />} />
           </Routes>
         </AnimatePresence>
       </Wrapper>

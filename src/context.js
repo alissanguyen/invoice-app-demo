@@ -4,7 +4,7 @@ import useThemeToggle from "./hooks/useThemeToggle";
 import useManageInvoices from "./hooks/useManageInvoices";
 import useFilter from "./hooks/useFilter";
 
-const AppContext = React.createContext();
+const AppContext = React.createContext('default');
 
 const AppProvider = ({ children }) => {
   const { theme, toggleTheme } = useThemeToggle();
